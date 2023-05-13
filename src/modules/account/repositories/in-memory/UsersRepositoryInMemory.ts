@@ -1,5 +1,6 @@
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { User } from "../../entities/User";
+import { ICreateUserDTO } from "@modules/account/dtos/ICreateUserDTO";
+import { User } from "@modules/account/infra/typeorm/entities/User";
+
 import { IUsersRepository } from "../IUsersRepository";
 
 class UsersRepositoryInMemory implements IUsersRepository {
@@ -21,7 +22,6 @@ class UsersRepositoryInMemory implements IUsersRepository {
       email,
       drive_license,
       avatar,
-      id,
     });
 
     this.users.push(user);
