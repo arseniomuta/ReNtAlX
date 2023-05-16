@@ -1,7 +1,8 @@
 import { Repository, getRepository } from "typeorm";
 
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
+import { ICreateUserDTO } from "@modules/account/dtos/ICreateUserDTO";
+import { IUsersRepository } from "@modules/account/repositories/IUsersRepository";
+
 import { User } from "../typeorm/entities/User";
 
 class UsersRepository implements IUsersRepository {
@@ -38,7 +39,7 @@ class UsersRepository implements IUsersRepository {
   }
 
   async findById(id: string): Promise<User> {
-    const user = await this.repository.findOne(id);
+    const user = await this.repository.findOne({ id });
 
     return user;
   }
