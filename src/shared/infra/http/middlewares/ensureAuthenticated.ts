@@ -21,12 +21,10 @@ export async function ensureAuthenticated(
 
   const [, token] = authHeader.split(" ");
 
-  console.log(token);
-
   try {
     const { sub: user_id } = verify(
       token,
-      "b7a4df21f847b04dc8459d6c93bc0580"
+      "1361638224f67ee09f7f2b852dd1c533"
     ) as IPayload;
 
     const usersRepository = new UsersRepository();
