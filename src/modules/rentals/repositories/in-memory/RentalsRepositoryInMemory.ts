@@ -25,7 +25,7 @@ class RentalsRepositoryInMemory implements IRentalsRepository {
   }: ICreatedRentalDTO): Promise<Rental> {
     const rental = new Rental();
 
-    Object.assign(Rental, {
+    Object.assign(rental, {
       user_id,
       car_id,
       expected_return_date,
