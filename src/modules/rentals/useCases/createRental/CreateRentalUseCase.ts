@@ -20,6 +20,7 @@ class CreateRentalUseCase {
 
     @inject("DayjsDateProvider")
     private dateProvider: IDateProvider,
+    @inject("CarsRepository")
     private carsRepository: ICarsRepository
   ) {}
 
