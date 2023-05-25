@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { CreateCarController } from "@modules/cars/useCases/createCar/CreateCarController";
+import { CreateRentalControl } from "@modules/rentals/useCases/createRental/CreateRentalController";
 import { DevolutionRentalController } from "@modules/rentals/useCases/devolutionRental/DevolutionRentCarController";
 import { ListRentalsByUserController } from "@modules/rentals/useCases/listRentalsUserByCar/ListRentalsByUserController";
 
@@ -8,7 +8,7 @@ import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
 
 const rentalRoutes = Router();
 
-const createRentalControl = new CreateCarController();
+const createRentalControl = new CreateRentalControl();
 const devolutionRentalController = new DevolutionRentalController();
 const listRentalsByUserController = new ListRentalsByUserController();
 
