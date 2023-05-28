@@ -12,8 +12,8 @@ describe("Create category controller", () => {
     connection = await createConnection();
     await connection.runMigrations();
 
-    const password = await hash("admin", 8);
     const id = randomUUID();
+    const password = await hash("admin", 8);
 
     await connection.query(`
       INSERT INTO USERS(id, name, email, password, "isAdmin", created_at,
