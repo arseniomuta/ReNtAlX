@@ -5,6 +5,8 @@ import "express-async-errors";
 
 import swaggerUi from "swagger-ui-express";
 
+import update from "@config/update";
+
 import swaggerFile from "../../../swagger.json";
 import { AppError } from "../../errors/AppError";
 import createConnection from "../typeorm";
@@ -18,6 +20,9 @@ const app = express();
 app.use(express.json());
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
+
+app.use("/avatar", express.static(`${update.tmpFolder}/avatar`));
+app.use("/cars", express.static(`${update.tmpFolder}/cars`));
 
 app.use(router);
 
