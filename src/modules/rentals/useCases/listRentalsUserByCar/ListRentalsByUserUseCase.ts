@@ -1,7 +1,6 @@
+import { Rental } from "modules/rentals/infra/typeorn/entities/Rental";
+import { IRentalsRepository } from "modules/rentals/repositories/IRentalsRepository";
 import { inject, injectable } from "tsyringe";
-
-import { Rental } from "@modules/rentals/infra/typeorn/entities/Rental";
-import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 
 @injectable()
 class ListRentalsByUserUseCase {

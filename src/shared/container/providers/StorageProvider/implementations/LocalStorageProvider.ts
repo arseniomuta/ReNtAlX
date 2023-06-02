@@ -1,7 +1,6 @@
+import update from "config/update";
 import fs from "fs";
 import { resolve } from "path";
-
-import update from "@config/update";
 
 import { IStorageProvider } from "../IStorageProvider";
 

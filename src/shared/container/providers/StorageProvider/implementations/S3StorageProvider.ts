@@ -1,9 +1,8 @@
 import { S3 } from "aws-sdk";
+import update from "config/update";
 import fs from "fs";
 import mime from "mime";
 import { resolve } from "path";
-
-import update from "@config/update";
 
 import { IStorageProvider } from "../IStorageProvider";
 

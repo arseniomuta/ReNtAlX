@@ -1,3 +1,4 @@
+import { Car } from "modules/cars/infra/typeorm/entities/Car";
 import { randomUUID } from "node:crypto";
 import {
   Column,
@@ -8,8 +9,6 @@ import {
   PrimaryColumn,
   UpdateDateColumn,
 } from "typeorm";
-
-import { Car } from "@modules/cars/infra/typeorm/entities/Car";
 
 @Entity("rentals")
 class Rental {

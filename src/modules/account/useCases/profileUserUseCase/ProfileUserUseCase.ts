@@ -1,8 +1,7 @@
+import { IUserResponseDTO } from "modules/account/dtos/IUserResponseDTO";
+import { UserMap } from "modules/account/mapper/UserMap";
+import { IUsersRepository } from "modules/account/repositories/IUsersRepository";
 import { inject, injectable } from "tsyringe";
-
-import { IUserResponseDTO } from "@modules/account/dtos/IUserResponseDTO";
-import { UserMap } from "@modules/account/mapper/UserMap";
-import { IUsersRepository } from "@modules/account/repositories/IUsersRepository";
 
 @injectable()
 class ProfileUserUseCase {

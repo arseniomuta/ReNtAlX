@@ -1,7 +1,6 @@
+import { ICreatedRentalDTO } from "modules/rentals/dtos/ICreatedRentalDTO";
+import { IRentalsRepository } from "modules/rentals/repositories/IRentalsRepository";
 import { Repository, getRepository } from "typeorm";
-
-import { ICreatedRentalDTO } from "@modules/rentals/dtos/ICreatedRentalDTO";
-import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 
 import { Rental } from "../entities/Rental";
 

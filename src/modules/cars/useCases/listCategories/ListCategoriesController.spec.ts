@@ -1,10 +1,9 @@
 import { hash } from "bcryptjs";
 import { randomUUID } from "node:crypto";
+import { app } from "shared/infra/http/app";
+import createConnection from "shared/infra/typeorm";
 import request from "supertest";
 import { Connection } from "typeorm";
-
-import { app } from "@shared/infra/http/app";
-import createConnection from "@shared/infra/typeorm";
 
 let connection: Connection;
 describe("Create category controller", () => {
