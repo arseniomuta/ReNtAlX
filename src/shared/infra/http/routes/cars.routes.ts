@@ -1,4 +1,4 @@
-import uploadConfig from "config/update";
+import uploadConfig from "config/upload";
 import { Router } from "express";
 import { CreateCarController } from "modules/cars/useCases/createCar/CreateCarController";
 import { CreateCarSpecificationController } from "modules/cars/useCases/createCarSpecification/CreateCarSpecificationController";

@@ -1,5 +1,5 @@
 import { S3 } from "aws-sdk";
-import update from "config/update";
+import upload from "config/upload";
 import fs from "fs";
 import mime from "mime";
 import { resolve } from "path";
@@ -16,7 +16,7 @@ class S3StorageProvider implements IStorageProvider {
   }
 
   async save(file: string, folder: string): Promise<string> {
-    const originalName = resolve(update.tmpFolder, file);
+    const originalName = resolve(upload.tmpFolder, file);
 
     const fileContent = await fs.promises.readFile(originalName);
 

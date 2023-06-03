@@ -1,4 +1,4 @@
-import uploadConfig from "config/update";
+import uploadConfig from "config/upload";
 import { Router } from "express";
 import { CreateUserController } from "modules/account/useCases/createUser/CreateUserController";
 import { ProfileUserController } from "modules/account/useCases/profileUserUseCase/ProfileUserController";
