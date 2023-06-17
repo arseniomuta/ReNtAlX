@@ -1,17 +1,18 @@
 import "reflect-metadata";
 import "dotenv/config";
-import express, { NextFunction, Request, Response } from "express";
+import express, { Request, Response, NextFunction } from "express";
 import "express-async-errors";
 
 import swaggerUi from "swagger-ui-express";
 
-import upload from "../../../config/upload";
+import upload from "@config/upload";
+import { AppError } from "@shared/errors/AppError";
+import createConnection from "@shared/infra/typeorm";
+
 import swaggerFile from "../../../swagger.json";
-import { AppError } from "../../errors/AppError";
-import createConnection from "../typeorm";
 import { router } from "./routes";
 
-import "shared/container";
+import "@shared/container";
 
 createConnection();
 const app = express();

@@ -1,32 +1,32 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "target": "ES5",
     "module": "commonjs",
     "baseUrl": "./src",
-    "outDir": "build",
+    "outDir": "./dist",
     "paths": {
       "@modules/*": [
-        "src/modules/*"
+        "modules/*"
       ],
       "@config/*": [
-        "src/config/*"
+        "config/*"
       ],
       "@shared/*": [
-        "src/shared/*"
+        "shared/*"
       ],
       "@errors/*": [
-        "src/errors/*"
+        "errors/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "utils/*"
       ]
     },
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
   },
   "exclude": ["node_modules","babel.config.js", "dist", "vite.config.ts", "coverage", "document", "vite-e2e.config.ts"],
 }

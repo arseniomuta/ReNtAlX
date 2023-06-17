@@ -1,9 +1,10 @@
-import auth from "config/auth";
 import { sign, verify } from "jsonwebtoken";
-import { IUsersTokensRepository } from "modules/account/repositories/IUsersTokensRepository";
-import { IDateProvider } from "shared/container/providers/DateProvider/IDateProvider";
-import { AppError } from "shared/errors/AppError";
 import { inject, injectable } from "tsyringe";
+
+import auth from "@config/auth";
+import { IUsersTokensRepository } from "@modules/account/repositories/IUsersTokensRepository";
+import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
+import { AppError } from "@shared/errors/AppError";
 
 interface IPayload {
   sub: string;
